@@ -1,6 +1,8 @@
 #include <iostream>
 #include "Subsystem.cpp"
 
+using namespace std;
+
 class Facade {
     protected:
         Subsystem *subsystem1_;
@@ -14,17 +16,17 @@ class Facade {
 
         ~Facade()
         {
-            std::cout << "Ordering subsystem to destroy\n" << this->subsystem1_->destroy();
+            cout << "Ordering subsystem to destroy\n" << this->subsystem1_->destroy();
             delete subsystem1_;
         }
 
         void initialize()
         {
-            std::string result = "Facade is initializing subsystems\n";
+            string result = "Facade is initializing subsystems\n";
             result += this->subsystem1_->initialize();
             result += "Facade ordered subsystems to activate\n";
             result += this->subsystem1_->action();
-            std::cout << result;
+            cout << result;
         }
 };
 

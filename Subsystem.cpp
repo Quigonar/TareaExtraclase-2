@@ -1,18 +1,20 @@
 #include <iostream>
 
+using namespace std;
+
 class Subsystem {
     public:
-        std::string initialize() const
+        string initialize() const
         {
             return "Subsystem initialized!\n";
         }
 
-        std::string action() const
+        string action() const
         {
             return "Subsystem activated!\n";
         }
         
-        std::string destroy() const
+        string destroy() const
         {
             return "Subsytem destroying!\n";
         }
